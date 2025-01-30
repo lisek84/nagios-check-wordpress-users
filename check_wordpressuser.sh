@@ -50,10 +50,8 @@ validate_users() {
         mv "$temp_file" "$user_file"
         secure_file "$user_file"
         echo "OK: User list in $dir has been validated and updated."
-        exit $NAGIOS_OK
     else
         echo "WARNING: No pending user list changes found in $dir."
-        exit $NAGIOS_WARNING
     fi
 }
 
